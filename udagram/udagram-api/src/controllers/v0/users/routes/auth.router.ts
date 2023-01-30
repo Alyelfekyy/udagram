@@ -3,7 +3,7 @@ import {Router, Request, Response} from 'express';
 import {User} from '../models/User';
 import * as c from '../../../../config/config';
 
-// import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
 import {NextFunction} from 'connect';
 
@@ -11,7 +11,7 @@ import * as EmailValidator from 'email-validator';
 import {config} from 'bluebird';
 
 const router: Router = Router();
-var bcrypt = require('bcryptjs');
+
 
 async function generatePassword(plainTextPassword: string): Promise<string> {
   const saltRounds = 10;
@@ -99,7 +99,6 @@ router.post('/', async (req: Request, res: Response) => {
 
   const generatedHash = await generatePassword(plainTextPassword);
 
-  //@ts-ignore
   const newUser = await new User({
     email: email,
     passwordHash: generatedHash,
