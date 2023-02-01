@@ -11,4 +11,4 @@ export AWS_SECRET_ACCESS_KEY=HEYOPa7SeHx3cPfXHoSi9StD6CwTlujmDzEw7krM
 export AWS_PROFILE=default
 export JWT_SECRET=topsecret
 export URL=http://localhost:8100
-export CHROME_BIN=/usr/bin/chromium-browser
+export CHROME_BIN=C:/Program Files (x86)/Google/Chrome/Application/chrome.exe
