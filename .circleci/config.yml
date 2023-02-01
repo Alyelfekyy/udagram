@@ -24,21 +24,26 @@ jobs:
                       echo "NPM --version" 
                       echo $(npm --version)
                       npm run frontend:install
-            # Done: Install dependencies in the the backend API
             - run:
                   name: Install API Dependencies
                   command: |
                       npm run api:install
-            # Done: Build the frontend app
             - run:
                   name: Front-End Build
                   command: |
                       npm run frontend:build
-            # Done: Build the backend API
             - run:
                   name: API Build
                   command: |
                       npm run api:build
+            - run:
+                  name: frontend test
+                  command: |
+                      npm run frontend:test
+            - run:
+                  name: API test
+                  command: |
+                      npm run api:test
     # deploy step will run only after manual approval
     deploy:
         docker:
