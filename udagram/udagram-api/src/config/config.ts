@@ -10,7 +10,7 @@ export const config = {
     host: process.env.POSTGRES_HOST,
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAcessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    dialect: process.env.dia,
+    dialect: process.env.DIALECT,
     aws_region: process.env.AWS_REGION,
 
     aws_profile: process.env.AWS_PROFILE,
