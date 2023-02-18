@@ -8,9 +8,9 @@ export const config = {
     dbPort: Number(process.env.DB_PORT),
     port: Number(process.env.PORT),
     host: process.env.POSTGRES_HOST,
-    accessKeyId: process.env.accessKeyId,
-    secretAcessKey: process.env.secretAcessKey,
-    dialect: 'postgres',
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAcessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    dialect: process.env.dia,
     aws_region: process.env.AWS_REGION,
 
     aws_profile: process.env.AWS_PROFILE,
